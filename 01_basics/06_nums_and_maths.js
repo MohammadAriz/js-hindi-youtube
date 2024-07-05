@@ -1,5 +1,6 @@
 const score= 100
-const number = new Number(100)
+const number = new Number(100);
+console.log(number)
 console.log(number.toString());
 console.log(typeof number.toString());
 console.log(number.toString().length);

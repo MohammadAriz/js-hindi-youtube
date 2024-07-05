@@ -17,9 +17,9 @@ console.log(newArr) // join converts this to string
 console.log(myArr)
 
 const mySlice=myArr.slice(2)
-console.log(mySlice)
+console.log(mySlice) //will not work as heap and will not change original
 console.log(myArr)
 
 const mySplice=myArr.splice(2,4,10,11,13)//2->position,4->number of elemnts to remove from that position,10,11,13 this need to add in removed position
-console.log(mySplice)
+console.log(mySplice) //this will change the original array
 console.log(myArr)
