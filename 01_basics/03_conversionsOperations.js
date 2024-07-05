@@ -24,4 +24,4 @@ console.log(1+"2")//will  give you 12
 console.log("1"+2)//will  give you 12
 console.log("1"+2-13) //now will become 12-13
 console.log("1"+2+2)
-console.log(1+2+"2") //will give you 32
+console.log(1+2+"2") //will give you 32 
