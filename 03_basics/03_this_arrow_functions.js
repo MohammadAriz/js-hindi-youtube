@@ -42,5 +42,5 @@ console.log(addTwo(3,4))
 const addThree=(num1,num2,num3)=>(num1+num2+num3)
 console.log(addThree(2,3,4))
 
-const object=()=>({username:"ariz"})//yaha object ko bhi parenthesis me defie karna hota hai nahi to undefined dega
+const object=()=>({username:"ariz"})//yaha object ko bhi parenthesis me define karna hota hai nahi to undefined dega
 console.log(object())

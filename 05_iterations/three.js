@@ -4,7 +4,7 @@ for (const val of arr) {
     console.log(val)
 }
 for (const val in arr) {
-    // console.log(val) this will give key
+    console.log(val) //this will give key
     console.log(arr[val]) //this will give value
 }
 const greetings= "Hello World"
@@ -30,10 +30,10 @@ for(const [key,value] of map ){
     console.log([key,value])
 }
 
-const myObj={
-    'gameone':'NFS',
-    'gametwo':'spiderman'
-}
-for (const obj of myObj ){
-    console.log(obj) //not iteratable here for for-of
-}
+// const myObj={
+//     'gameone':'NFS',
+//     'gametwo':'spiderman'
+// }
+// for (const obj of myObj ){
+//     console.log(obj) //not iteratable here for for-of
+// }

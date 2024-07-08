@@ -10,9 +10,10 @@ function addTwoNumbers(num1,num2){
     
     console.log(num1+num2);
 }
-const result=addTwoNumbers(9,5)
 addTwoNumbers(5,"a")
-console.log(result) //will give you undefined
+const result=addTwoNumbers(9,5)
+
+console.log(result) //will give you undefined because function did not return anything
 
 function addNumbers(num1,num2){
     console.log("here will work because before return it works")
@@ -40,12 +41,12 @@ function addCartItems(num){
 return num;
 }
 console.log(addCartItems(2))
-console.log(addCartItems(2,3,4))
+console.log(addCartItems(2,3,4))// this will return the first value only thats why we will use spread operator
 
 function addCartItemsAgain(...num){
     return num;
     }
-console.log(addCartItemsAgain(2,3,4))
+console.log(addCartItemsAgain(2,3,4)) 
 
 const user={
     userName:"Ariz",

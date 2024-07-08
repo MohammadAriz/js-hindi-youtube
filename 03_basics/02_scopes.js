@@ -21,7 +21,6 @@ function one(){
         const website="youtube"
         console.log(username)
     }
-   
     two()
     // console.log(website)
 }
@@ -33,7 +32,7 @@ if(true){
         const website="youtube"
         console.log(website + username)
     }
-    // console.log(wrebsite) will throw an error
+    // console.log(website) will throw an error
 }
 // console.log(username) also will throw an error
 
@@ -50,7 +49,7 @@ console.log(num)
 addtwo(5) //here  we can define but see next code
 
 
-addthree(5) //here cant define earlier 
+addthree(5) //here cant define earlier
 const addthree= function(num){
     console.log(num)
     }
