@@ -3,9 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom Learning</title>
 </head>
 <body>
-    
+    <div class="bg-black">
+        <h1  class="heading" id="title">Dom Learning on chai or code</h1>
+        <h2  class="heading" id="title2">Dom Learning on chai or code first h2</h2>
+        <h2  class="heading" id="title3">Dom Learning on chai or code second h2</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="text">
+        <input type="password">
+
+        <ul>
+            <li class="item-list">one</li>
+            <li class="item-list">two</li>
+            <li class="item-list">three</li>
+            <li class="item-list">four</li>
+        </ul>
+        <ul>
+            <li>five</li>
+            <li>six</li>
+            <li>seven</li>
+            <li>eight</li>
+        </ul>
+    </div>
 </body>
 </html>
+
+//NOTES
+
+document.getElementById('title')   
+<h1 class=​"heading" id=​"title">​Dom Learning on chai or code​</h1>​
+
+document.getElementById('title').class
+undefined
+
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class','headingset')
+this will override the previous class heading to heading set
+
+document.getElementById('title')
+<h1 class=​"headingset" id=​"title">​Dom Learning on chai or code​</h1>​
+
+document.getElementById('title').setAttribute('class','headingset heading')
+this will give previous class heading to heading set along with new one
+
+document.getElementById('title')
+<h1 class=​"headingset heading" id=​"title">​Dom Learning on chai or code​</h1>​
+
+const title= document.getElementById('title')
+undefined
+
+title
+<h1 class=​"headingset heading" id=​"title">​Dom Learning on chai or code​</h1>​
+
+title.style.color="red"
+'red'
+
+title.style.padding="10px"
+'10px'
+
+title
+<h1 class=​"headingset heading" id=​"title" style=​"color:​ red;​ padding:​ 10px;​">​Dom Learning on chai or code​</h1>​
+
+title.textContent
+'Dom Learning on chai or code' //it will show all the content whether hidden or not.
+
+title.innerText
+'Dom Learning on chai or code' //this will give the shown text only i.e. if anytext is hide by display none then it will ot show
+
+title.innerHTML
+'Dom Learning on chai or code' //this will give us the html tags also if is there 
+
+//QUERY SELECTOR-
+
+document.querySelector('h2') //THIS WILL SELECT THE FIRST ELEMENT ONLY i.e. there were more h2's were there but this select the first h2 
+<h2 class=​"heading" id=​"title2">​Dom Learning on chai or code first h2​</h2>​
+
+document.querySelector('#title')
+<h1 class=​"heading" id=​"title">​Dom Learning on chai or code​</h1>​
+
+document.querySelector('.heading')
+<h1 class=​"heading" id=​"title">​Dom Learning on chai or code​</h1>​
+
+document.querySelector('input') // first input will get selected only
+<input type=​"text">​ 
+
+document.querySelector('input[type="password"]')
+<input type=​"password">​
+
+document.querySelector('ul')
+<ul style=​"color:​ orange;​">​…​</ul>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+
+document.querySelector('ul').style.color="orange"
+'orange'
+
+const myFirstUl=document.querySelector('ul');
+undefined
+
+myFirstUl
+<ul style=​"color:​ orange;​">​…​</ul>​
+
+myFirstUl.querySelector('li')
+<li>​…​</li>​
+
+const green=myFirstUl.querySelector('li')
+green.style.backgroundColor="green"
+'green'
+
+//QUERY SELECTOR all
+document.querySelectorAll("li")
+NodeList(8) [li, li, li, li, li, li, li, li]
+
+const temp=document.querySelectorAll("li")
+temp.style.color="blue" //WILL THROW AN ERROR because in node list we have tio define for which index value we are making changes whether there is only one element then also we have to define
+VM1740:2 Uncaught TypeError: 
+
+const temp=document.querySelectorAll("li")
+temp[2].style.color="blue"
+'blue'
+
+const h1= document.querySelectorAll("hi")
+hi.style.color="blue"
+VM1809:2 Uncaught ReferenceError
+
+h1[0].style.color="blue"
+'blue'
+
+const h1= document.querySelectorAll("h1")
+h1[0].style.color="blue"
+'blue'
+
+const temp=document.querySelectorAll("li")
+temp[2].style.color="blue"
+'blue'
+
+temp
+NodeList(13) [li, li, li, li, li, li, li, li, li, li, li, li, li]
+
+temp.forEach(function(li){
+    li.style.backgroundColor="green"
+}
+            )
+will givethe color green // in nodelist we can apply forEach
+
+
+const makeArray=document.getElementByClassName('item-list')
+makeArray
+HTMLCollection(4) [li.item-list, li.item-list, li.item-list, li.item-list] //here we got html collection in this directly we cant aply foreach soi we will convert this to array
+
+const convertedArray=Array.from(makeArray)
+convertedArray
+
+convertedArray.forEach(function(li){
+    li.style.backgroundColor="purple"
+})
+undefined
+
+convertedArray.map((item)=>{item.style.backgroundColor="black"}) // we can apply Map also here.
