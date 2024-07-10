@@ -48,3 +48,13 @@ form.addEventListener('submit', function (e) {
     }
   }
 });
+
+
+##project 3- digital clock
+
+const time = document.querySelector('#clock');
+setInterval(function () {
+  const date = new Date();
+  time.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
