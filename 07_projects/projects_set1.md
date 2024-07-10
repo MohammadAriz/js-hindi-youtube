@@ -21,3 +21,30 @@ buttons.forEach(function (button) {
     }
   });
 });
+
+
+##PROJECT 2- BMI CALCULATOR
+
+const form = document.querySelector('form');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+
+  const result = document.querySelector('#results');
+  if (height == '' || isNaN(height) || height < 0) {
+    results.innerHTML = `please enter valid value, the value you entered is ${height}`;
+  } else if (weight == '' || isNaN(weight) || weight < 0) {
+    results.innerHTML = `please enter valid value, the value you entered is ${weight}`;
+  } else {
+    const BMI = (weight / ((height * height) / 10000)).toFixed(2);
+    console.log(BMI);
+    if (BMI < 18.6) {
+      results.innerHTML = `${BMI} and you are under weight`;
+    } else if (18.6 < BMI && BMI < 24.9) {
+      results.innerHTML = `${BMI} and you are Normal weight`;
+    } else {
+      results.innerHTML = `${BMI} and you are Over weight`;
+    }
+  }
+});
